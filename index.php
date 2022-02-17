@@ -14,10 +14,10 @@
 		<div class="dws-form">
 			<label class="tab active form-label" title="Вкладка 1">Авторизация</label>
 			<label class="tab form-label" title="Вкладка 2">Регистрация</label>
-			<form id="form-1" class="tab-form active">
-				<input class="form-control mb-2" type="email" placeholder="Введите E-mail">
-				<input class="form-control mb-2" type="password" placeholder="Введите пароль">
-				<a href="#" class="button btn btn-primary btn-block mb-2">Войти</a>
+			<form id="form-1" class="tab-form active" action="./php/auth.php" method="post">
+				<input class="form-control mb-2" name="login" type="text" placeholder="Введите логин">
+				<input class="form-control mb-2" name="pass" type="password" placeholder="Введите пароль">
+				<button class="button btn btn-primary btn-block mb-2">Войти</button>
 				<ul class="d-flex flex justify-content-between mb-3">
 					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -27,16 +27,11 @@
 				</ul>
 				<a href="#" class="d-block w-100 text-center">Я забыл свой E-mail или пароль</a>
 			</form>
-			<form id="form-2" class="tab-form">
-				<input class="form-control mb-2" type="email" placeholder="Введите E-mail адрес">
-				<input class="form-control mb-2" type="text" placeholder="Введите свое имя">
-				<input class="form-control mb-2" type="password" placeholder="Введите пароль">
-				<a href="#" class="button btn btn-primary mb-2 btn-block">Регистрация</a>
-
-				<div class="recover d-flex justify-content-left">
-					<input class="m-auto w-25" type="checkbox">
-					<label class="form-check-label">Ознакомлен(-а) и принимаю <a  href="#">условия регистрации</a></label>
-				</div>
+			<form id="form-2" class="tab-form" action="./php/check.php" method="post">
+				<input class="form-control mb-2" name="login" type="text" placeholder="Введите логин">
+				<input class="form-control mb-2" name="name" type="text" placeholder="Введите свое имя">
+				<input class="form-control mb-2" name="pass" type="password" placeholder="Введите пароль">
+				<button class="button btn btn-primary mb-2 btn-block">Регистрация</button>
 			</form>
 		</div>
 	</div>
